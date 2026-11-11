@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panduan Rawat Mobil | Perawatan Mobil, Dijelaskan Sederhana</title>
+<meta name="description" content="Panduan independen perawatan mobil rutin: ban, rem, aki, oli, cairan, tanda bahaya, dan perencanaan servis yang lebih cerdas.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#15191d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Panduan Rawat Mobil | Perawatan Mobil, Dijelaskan Sederhana">
+<meta property="og:description" content="Panduan independen perawatan mobil rutin untuk pengemudi sehari-hari.">
+<!-- GANTI dengan domain Anda -->
+<link rel="canonical" href="https://domain-anda.com/">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8476774265191060"
+     crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f4f5f6; --surface:#ffffff; --ink:#15191d; --muted:#5a646e; --line:#d9dee2;
+  --accent:#d98e00; --accent-ink:#15191d; --dark:#15191d; --dark-ink:#eef1f3;
+  --head:"Archivo",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif;
+  --max:1120px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101316;--surface:#1a1f24;--ink:#eef1f3;--muted:#9aa5af;--line:#2b333a;--accent:#f2a900;--dark:#0b0d0f}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em;max-width:18ch}
+h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+p{margin:0 0 1em;max-width:68ch}
+section{padding:80px 0;border-top:1px solid var(--line)}
+.lead{color:var(--muted);max-width:60ch;margin-top:16px}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:var(--dark);color:var(--dark-ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
+.logo{font:800 1.05rem var(--head);letter-spacing:.02em;text-decoration:none}
+.logo b{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav a{text-decoration:none;font-size:.92rem;white-space:nowrap;opacity:.85}
+nav a:hover{opacity:1;color:var(--accent)}
+
+/* Hero */
+.hero{background:var(--dark);color:var(--dark-ink);padding:96px 0 88px;border:0}
+.hero small{color:var(--accent);font-weight:600}
+.hero h1{font-size:clamp(2.6rem,8vw,5.6rem);font-weight:800;letter-spacing:-.03em;margin:14px 0 22px;max-width:14ch}
+.hero p{color:#b6c0c8;font-size:1.15rem}
+.note{margin-top:32px;border-left:4px solid var(--accent);padding:4px 0 4px 18px;max-width:62ch;color:#b6c0c8}
+.note strong{display:block;color:var(--dark-ink)}
+
+/* Grids */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);padding:24px;border-radius:4px}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+
+/* Planner */
+.planner{display:grid;gap:32px;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);margin-top:40px}
+@media(max-width:820px){.planner{grid-template-columns:1fr}}
+form{display:grid;gap:16px;align-content:start}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select{font:inherit;padding:12px 14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:4px}
+button{font:700 1rem var(--head);padding:14px 20px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:4px;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+.result{background:var(--surface);border:1px solid var(--line);padding:28px;border-radius:4px;min-height:240px}
+.result ul{padding-left:20px;margin:12px 0}
+.result li{margin-bottom:8px}
+.small{color:var(--muted);font-size:.9rem}
+
+/* Tabel */
+.tablewrap{overflow-x:auto;margin-top:40px;border:1px solid var(--line);border-radius:4px}
+table{border-collapse:collapse;width:100%;min-width:640px;background:var(--surface)}
+th,td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.96rem}
+th{font-family:var(--head);background:var(--dark);color:var(--dark-ink)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.callout{margin-top:24px;padding:18px 22px;background:var(--surface);border-left:4px solid var(--accent)}
+
+/* Tanda bahaya */
+.two{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:40px}
+.alert{background:var(--dark);color:var(--dark-ink);padding:28px;border-radius:4px}
+.alert h3{color:var(--accent)}
+.alert li,.record li{margin-bottom:8px}
+.record{background:var(--surface);border:1px solid var(--line);padding:28px;border-radius:4px}
+.record h3{margin-bottom:10px}
+ul,ol{padding-left:20px;margin:0}
+
+/* Glosarium */
+dl{display:grid;gap:0 32px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin:40px 0 0}
+dl div{padding:16px 0;border-bottom:1px solid var(--line)}
+dt{font:700 1rem var(--head)}
+dd{margin:4px 0 0;color:var(--muted);font-size:.96rem}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:820px}
+summary{font:700 1.08rem var(--head);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:12px 0 0;color:var(--muted)}
+
+/* Iklan */
+.ad{margin:32px 0;text-align:center;min-height:90px}
+
+/* Footer */
+footer{background:var(--dark);color:var(--dark-ink);padding:48px 0;font-size:.93rem}
+footer p{color:#9aa5af}
+footer ul{display:flex;flex-wrap:wrap;gap:20px;list-style:none;padding:0;margin:18px 0 0}
+footer a{text-decoration:none;border-bottom:1px solid #3a444c}
+footer a:hover{color:var(--accent)}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">RAWAT<b>MOBIL</b></a>
+    <nav aria-label="Menu utama">
+      <ul>
+        <li><a href="#perencana">Perencana</a></li>
+        <li><a href="#sistem">Sistem</a></li>
+        <li><a href="#jadwal">Jadwal</a></li>
+        <li><a href="#masalah">Tanda bahaya</a></li>
+        <li><a href="#glosarium">Glosarium</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <small>Referensi perawatan kendaraan independen</small>
+      <h1>Perawatan mobil, dijelaskan sederhana.</h1>
+      <p>Pahami pengecekan rutin yang menjaga mobil tetap andal, mulai dari oli dan ban sampai rem, aki, dan cairan, tanpa bingung setiap kali lampu indikator menyala.</p>
+      <div class="note">
+        <strong>Mulai dari buku manual</strong>
+        Interval servis dan spesifikasi cairan berbeda di tiap kendaraan. Gunakan panduan ini untuk memahami pekerjaannya, lalu pastikan ketentuan pastinya di buku manual atau jadwal servis dari pabrikan.
+      </div>
+    </div>
+  </section>
+
+  <section id="sistem">
+    <div class="wrap">
+      <h2>Kenali sistem yang rutin dirawat.</h2>
+      <p class="lead">Perawatan yang baik bukan soal menghafal ratusan komponen, tetapi memantau beberapa sistem secara konsisten.</p>
+      <div class="grid">
+        <article class="card"><h3>Oli mesin</h3><p>Oli melumasi dan membantu melindungi komponen dalam mesin. Cek level dengan prosedur yang ditentukan dan pakai hanya kekentalan serta spesifikasi yang direkomendasikan pabrikan.</p></article>
+        <article class="card"><h3>Ban</h3><p>Tekanan, kondisi tapak, spooring, dan rotasi memengaruhi kestabilan dan umur ban. Pakai tekanan dingin pada stiker pintu pengemudi, bukan angka maksimum di sisi ban.</p></article>
+        <article class="card"><h3>Rem</h3><p>Perubahan rasa pengereman, suara tidak biasa, atau lampu peringatan perlu segera dicek. Keausan komponen rem berbeda tergantung kendaraan dan gaya berkendara.</p></article>
+        <article class="card"><h3>Aki</h3><p>Starter berat, masalah kelistrikan, atau kerak di kutub bisa jadi tanda. Performa aki dipengaruhi usia, iklim, dan pola pemakaian.</p></article>
+        <article class="card"><h3>Cairan</h3><p>Coolant, minyak rem, oli transmisi, dan air wiper punya fungsi berbeda. Jenis dan cara pengecekannya bisa sangat berbeda antar kendaraan.</p></article>
+        <article class="card"><h3>Filter dan visibilitas</h3><p>Filter udara dan kabin, wiper, lampu, dan kaca sering terlewat, padahal memengaruhi tenaga mesin, kenyamanan kabin, dan jarak pandang.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="perencana">
+    <div class="wrap">
+      <h2>Asisten perencana perawatan.</h2>
+      <p class="lead">Masukkan perkiraan odometer dan pola berkendara. Alat ini membuat daftar pengecekan umum, bukan jadwal servis resmi pabrikan.</p>
+      <div class="planner">
+        <form id="planner-form">
+          <label>Odometer saat ini (km)
+            <input id="km" type="number" min="0" step="500" value="35000" required>
+          </label>
+          <label>Pola berkendara
+            <select id="usage">
+              <option value="normal">Campuran / normal</option>
+              <option value="city">Sering perjalanan pendek dalam kota</option>
+              <option value="heavy">Beban berat, menarik beban, atau berdebu</option>
+            </select>
+          </label>
+          <label>Usia kendaraan
+            <select id="age">
+              <option value="0">0–3 tahun</option>
+              <option value="1">4–7 tahun</option>
+              <option value="2">8+ tahun</option>
+            </select>
+          </label>
+          <button type="submit">Buat daftar cek</button>
+        </form>
+        <div class="result" id="result" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ad">
+    <!-- Letakkan unit iklan AdSense Anda di sini (ganti data-ad-slot) -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8476774265191060" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div></div>
+
+  <section id="jadwal">
+    <div class="wrap">
+      <h2>Ritme pengecekan yang praktis.</h2>
+      <p class="lead">Anggap tabel ini pengingat apa yang perlu diamati, bukan interval penggantian yang berlaku untuk semua mobil. Waktu penggantian mengikuti dokumen kendaraan dan kondisi nyata.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Kapan</th><th>Yang perlu dicek</th><th>Mengapa penting</th></tr></thead>
+          <tbody>
+            <tr><td>Rutin / sebelum perjalanan jauh</td><td>Tekanan dan kondisi ban, lampu, rembesan, air wiper, lampu indikator.</td><td>Menangkap masalah keselamatan sederhana sebelum perjalanan panjang.</td></tr>
+            <tr><td>Saat servis berkala</td><td>Oli mesin, filter, rem, ban, level cairan, dan kondisi kolong mobil.</td><td>Memberi kesempatan rutin untuk melihat keausan dan kebutuhan perawatan.</td></tr>
+            <tr><td>Pergantian musim / cuaca</td><td>Aki, wiper, ban, coolant, dan kinerja AC.</td><td>Cuaca ekstrem cepat membuka kelemahan aki, jarak pandang, dan ban.</td></tr>
+            <tr><td>Seiring usia dan jarak tempuh</td><td>Belt/selang, kaki-kaki, rembesan, servis cairan, dan item khusus pabrikan.</td><td>Usia dan pemakaian memengaruhi komponen di luar barang habis pakai biasa.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Penting:</strong> Sebagian mobil modern memakai indikator umur oli atau servis berbasis kondisi. Ikuti indikator dan dokumen kendaraan Anda, jangan menggantinya dengan angka kilometer generik.</div>
+    </div>
+  </section>
+
+  <section id="masalah">
+    <div class="wrap">
+      <h2>Perubahan yang perlu diselidiki.</h2>
+      <p class="lead">Suara, bau, getaran, atau lampu peringatan baru adalah informasi. Tujuannya bukan mendiagnosis sendiri, tetapi menyadari perubahan lebih awal dan menjelaskannya dengan jelas.</p>
+      <div class="two">
+        <div class="alert">
+          <h3>Berhenti dan periksa segera</h3>
+          <ul>
+            <li>Peringatan tekanan oli atau overheat.</li>
+            <li>Daya pengereman tiba-tiba hilang.</li>
+            <li>Bau bensin kuat atau kebocoran bahan bakar.</li>
+            <li>Masalah serius pada kemudi atau ban.</li>
+            <li>Asap, suhu naik cepat, atau tanda bahaya langsung lainnya.</li>
+          </ul>
+        </div>
+        <div class="record">
+          <h3>Catat detail berikut</h3>
+          <ol>
+            <li>Peringatan apa yang muncul?</li>
+            <li>Pada kecepatan dan kondisi apa?</li>
+            <li>Mesin sedang panas atau dingin?</li>
+            <li>Dari mana suara atau getaran terasa?</li>
+            <li>Berubah saat mengerem, belok, atau akselerasi?</li>
+          </ol>
+        </div>
+      </div>
+      <p style="margin-top:28px" class="small">Jika kondisi mungkin membuat mobil tidak aman dikendarai, utamakan berhenti di tempat aman dan hubungi bantuan profesional. Situs ini tidak dapat menentukan apakah kendaraan tertentu aman dipakai.</p>
+    </div>
+  </section>
+
+  <section id="servis">
+    <div class="wrap">
+      <h2>Sebelum menyetujui pekerjaan bengkel.</h2>
+      <div class="grid">
+        <article class="card"><h3>Tanyakan dasar temuannya</h3><p>Minta alasan rekomendasi: keausan terukur, kebocoran, kode kesalahan, usia, jadwal perawatan, atau temuan lain.</p></article>
+        <article class="card"><h3>Bedakan perawatan dan perbaikan</h3><p>Perawatan rutin, saran pencegahan, dan perbaikan kerusakan adalah kategori berbeda. Memahaminya membantu menilai tingkat urgensi.</p></article>
+        <article class="card"><h3>Pastikan spesifikasi</h3><p>Cairan, filter, busi, dan suku cadang lain bisa punya syarat khusus tiap kendaraan. Pastikan servis yang diusulkan sesuai spesifikasi pabrikan.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="glosarium">
+    <div class="wrap">
+      <h2>Glosarium perawatan mobil.</h2>
+      <dl>
+        <div><dt>ABS</dt><dd>Anti-lock braking system, membantu mencegah roda terkunci saat pengereman keras.</dd></div>
+        <div><dt>Coolant</dt><dd>Cairan sistem pendingin untuk mengatur suhu mesin dan melindungi sistemnya.</dd></div>
+        <div><dt>Dipstick</dt><dd>Batang ukur untuk mengecek level cairan tertentu, umumnya oli mesin.</dd></div>
+        <div><dt>OBD</dt><dd>On-board diagnostics, sistem yang memantau gangguan dan menyimpan kode kerusakan.</dd></div>
+        <div><dt>PSI</dt><dd>Pounds per square inch, satuan tekanan yang lazim untuk angin ban.</dd></div>
+        <div><dt>Tapak ban</dt><dd>Permukaan beralur di bagian luar ban yang bersentuhan dengan jalan.</dd></div>
+        <div><dt>TPMS</dt><dd>Sistem pemantau tekanan ban yang dapat memperingatkan kondisi tekanan rendah.</dd></div>
+        <div><dt>Grade kekentalan</dt><dd>Klasifikasi cara alir oli pada suhu tertentu; gunakan grade yang ditentukan untuk kendaraan Anda.</dd></div>
+        <div><dt>Spooring</dt><dd>Penyetelan sudut roda sesuai spesifikasi pabrikan, memengaruhi kestabilan dan keausan ban.</dd></div>
+        <div><dt>Belt serpentine</dt><dd>Sabuk penggerak aksesori di banyak mesin; desain dan cara pemeriksaannya beragam.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Pertanyaan yang sering diajukan.</h2>
+      <div style="margin-top:40px">
+        <details><summary>Seberapa sering saya harus ganti oli mesin?</summary><p>Tidak ada satu interval untuk semua mobil. Desain mesin, spesifikasi oli, kondisi pemakaian, dan rekomendasi pabrikan berbeda-beda. Ikuti buku manual, jadwal servis, atau sistem indikator umur oli kendaraan.</p></details>
+        <details><summary>Berapa tekanan ban yang sebaiknya dipakai?</summary><p>Gunakan tekanan dingin dari pabrikan, biasanya tertera di stiker area pintu pengemudi atau di buku manual. Angka yang tercetak di sisi ban bukan tekanan operasi yang dianjurkan.</p></details>
+        <details><summary>Apakah lampu check engine selalu berarti kerusakan besar?</summary><p>Tidak. Lampu itu menandakan sistem diagnostik mendeteksi kondisi yang perlu diselidiki. Penyebab dan tingkat urgensinya beragam, jadi periksa data diagnostik dan perilaku mobil, jangan menebak dari lampunya saja.</p></details>
+        <details><summary>Apakah saya harus ganti komponen hanya karena jarak tempuh?</summary><p>Sebagian komponen punya interval terjadwal, sebagian lain diperiksa dan diganti sesuai kondisi. Lihat jadwal perawatan khusus kendaraan Anda dan tanyakan bukti di balik rekomendasi.</p></details>
+        <details><summary>Bolehkah saya merawat mobil sendiri?</summary><p>Pengecekan dasar bisa dilakukan banyak pemilik, tetapi tingkat kesulitan dan risikonya bervariasi. Gunakan prosedur dan peralatan yang benar, dan serahkan pekerjaan di luar kemampuan Anda kepada profesional.</p></details>
+        <details><summary>Mengapa jadwal servis tiap mobil berbeda?</summary><p>Desain kendaraan, material, cairan, iklim, dan kondisi pemakaian berbeda. Sebagian pabrikan juga menetapkan jadwal terpisah untuk kondisi pemakaian berat.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="wrap">
+      <h2>Pengetahuan otomotif untuk pengemudi sehari-hari.</h2>
+      <p class="lead">Rawat Mobil adalah sumber edukasi independen yang membantu memahami konsep perawatan kendaraan rutin. Kami tidak menjual jasa perbaikan, suku cadang, garansi, atau asuransi, dan tidak mendiagnosis kendaraan individu.</p>
+      <div class="grid">
+        <article class="card"><h3>Edukasi lebih dulu</h3><p>Konten menjelaskan konsep dan mendorong pembaca memverifikasi sesuai kendaraannya.</p></article>
+        <article class="card"><h3>Tanpa rekomendasi tersembunyi</h3><p>Kami tidak meranking bengkel atau mengarahkan pembaca ke produk tertentu.</p></article>
+        <article class="card"><h3>Hati-hati per kendaraan</h3><p>Bila ketentuan berbeda-beda, kami mengarahkan pembaca kembali ke dokumentasi pabrikan.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#">RAWAT<b>MOBIL</b></a>
+    <p style="margin-top:12px">Informasi edukasi independen tentang perawatan kendaraan rutin. Pembaruan editorial terakhir: <span id="updated"></span>.</p>
+    <ul>
+      <li><a href="/kebijakan-editorial.html">Kebijakan Editorial</a></li>
+      <li><a href="/privasi.html">Kebijakan Privasi</a></li>
+      <li><a href="/syarat.html">Syarat &amp; Ketentuan</a></li>
+      <li><a href="/disclaimer.html">Disclaimer</a></li>
+      <li><a href="/kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+document.getElementById('updated').textContent =
+  new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+
+document.getElementById('planner-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var km = Math.max(0, parseInt(document.getElementById('km').value,10) || 0);
+  var usage = document.getElementById('usage').value;
+  var age = parseInt(document.getElementById('age').value,10);
+  var items = [
+    'Cek tekanan ban (saat dingin), kondisi tapak, dan lampu indikator.',
+    'Periksa level oli mesin dan lihat apakah ada rembesan di kolong.',
+    'Periksa air wiper, kondisi wiper, dan semua lampu.'
+  ];
+  if (km >= 10000) items.push('Cocokkan servis oli dan filter dengan jadwal buku manual atau indikator umur oli.');
+  if (km >= 20000) items.push('Periksa ketebalan kampas rem, kondisi cakram/tromol, dan rasa pedal rem.');
+  if (km >= 40000) items.push('Tanyakan kondisi filter udara dan filter kabin saat servis berikutnya.');
+  if (km >= 60000) items.push('Cek jadwal pabrikan untuk oli transmisi, busi, dan belt/selang.');
+  if (km >= 100000) items.push('Periksa kaki-kaki, bushing, dan karet pada pemeriksaan menyeluruh.');
+  if (usage === 'city') items.push('Perjalanan pendek membuat mesin jarang mencapai suhu kerja penuh; perhatikan umur oli dan kondisi aki lebih sering.');
+  if (usage === 'heavy') items.push('Pemakaian berat atau berdebu: tanyakan jadwal kondisi berat di buku manual dan cek filter udara lebih sering.');
+  if (age >= 1) items.push('Uji kondisi aki dan periksa kekuatan karet wiper, selang, dan belt.');
+  if (age >= 2) items.push('Periksa usia ban (kode DOT), rembesan cairan, dan servis minyak rem serta coolant sesuai ketentuan pabrikan.');
+
+  var html = '<h3>Pengecekan umum sekitar ' + km.toLocaleString('id-ID') + ' km</h3>' +
+    '<p class="small">Gunakan ini sebagai bahan diskusi pada pemeriksaan berikutnya. Buku manual tetap menjadi sumber interval yang pasti.</p><ul>';
+  items.forEach(function(t){ html += '<li></li>'; });
+  html += '</ul>';
+  var box = document.getElementById('result');
+  box.innerHTML = html;
+  var lis = box.querySelectorAll('li');
+  items.forEach(function(t,i){ lis[i].textContent = t; });
+});
+document.getElementById('planner-form').dispatchEvent(new Event('submit',{cancelable:true}));
+</script>
+</body>
+</html>
